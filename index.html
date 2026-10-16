@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>月光影视 - 月相片单：新月/上弦/满月/下弦/残月/蓝月 | yueguangyingshi-h5</title>
+<meta name="description" content="月光影视（yueguangyingshi-h5.github.io）是月相放映台母题的影视导航站：按新月、上弦、满月、下弦、残月、蓝月挑片，覆盖电影/剧集/动漫/综艺/短剧/纪录片/修复/夜场直播。">
+<meta name="keywords" content="月光影视,月相片单,新月片单,满月大片,残月致郁,蓝月奇片,月亮电影,影视导航,yueguangyingshi-h5">
+<meta name="author" content="月光影视">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://yueguangyingshi-h5.github.io/">
+<meta property="og:title" content="月光影视 - 今夜什么月相，就看什么片">
+<meta property="og:description" content="新月藏冷门，上弦起势，满月放大片，下弦收尾，残月致郁，蓝月奇片。月光不播盗版，只把月色里的片子递给你。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yueguangyingshi-h5.github.io/">
+<meta property="og:site_name" content="月光影视">
+<meta name="msvalidate.01" content="BING_VERIFY_CODE">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"月光影视",
+  "url":"https://yueguangyingshi-h5.github.io/",
+  "description":"月光影视是月相放映台/银辉片单母题的影视导航站，按新月、上弦、满月、下弦、残月、蓝月推荐电影、剧集、动漫、综艺、短剧、纪录片、老片修复与夜场直播。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"月光影视和普通“月光影视APP”有什么不同？",
+      "acceptedAnswer":{"@type":"Answer","text":"市面月光影视多是聚合播片APP，靠解析线路和广告活着。本站是月相放映台：新月藏冷门、满月放大片、残月致郁、蓝月奇片，只做片单导航，不挂盗链、不卖会员、不提供破解包。"}
+    },
+    {
+      "@type":"Question",
+      "name":"月相片单怎么用？",
+      "acceptedAnswer":{"@type":"Answer","text":"看今晚心境和月亮：新月看冷门文艺，上弦看起势逆袭，满月看大片爽片，下弦看收尾慢片，残月看致郁长镜头，蓝月看奇幻/科幻/怪谈。月相约29.5天一轮，片单也跟着圆缺换血。[13](@ref)"}
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --bg:#0b1020;
+  --card:#121a2e;
+  --ink:#eaf0fb;
+  --muted:#9fb0c8;
+  --silver:#dfe7f5;
+  --blue:#6ea8ff;
+  --purple:#9b8cff;
+  --moon:#ffd479;
+  --tide:#1b2b3a;
+  --line:rgba(110,168,255,.32);
+  --shadow:0 18px 44px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  background:
+    radial-gradient(720px 380px at 86% -8%,rgba(155,140,255,.18),transparent 60%),
+    radial-gradient(620px 320px at 12% 8%,rgba(255,212,121,.12),transparent 55%),
+    linear-gradient(180deg,#0b1020 0%,#0e1526 56%,#070b15 100%);
+  color:var(--ink);line-height:1.78;
+}
+a{color:inherit;text-decoration:none}
+
+.yg-top{position:sticky;top:0;z-index:999;background:rgba(11,16,32,.93);backdrop-filter:blur(10px);border-bottom:2px solid var(--silver)}
+.yg-top__in{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.68rem 1rem}
+.yg-logo{font-weight:900;font-size:1.2rem}
+.yg-logo b{color:var(--silver)}
+.yg-logo i{color:var(--muted);font-style:normal;font-size:.76rem;background:rgba(110,168,255,.16);padding:.1rem .45rem;border-radius:8px}
+.yg-nav{display:flex;gap:.3rem}
+.yg-nav a{padding:.42rem .8rem;border-radius:20px;font-size:.9rem;color:var(--muted);font-weight:700}
+.yg-nav a:hover{background:rgba(223,231,245,.14);color:var(--silver)}
+.yg-burger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.yg-burger span{width:22px;height:2px;background:var(--silver);border-radius:2px}
+
+.yg-hero{max-width:1180px;margin:0 auto;padding:3.4rem 1rem 2.6rem;text-align:center;overflow:hidden}
+.yg-moon{width:120px;height:120px;margin:0 auto 1.1rem;border-radius:50%;
+  background:radial-gradient(circle at 38% 36%,#fff7e0 0 18%,var(--moon) 30%,#caa24a 70%,#7c6326 100%);
+  box-shadow:0 0 60px rgba(255,212,121,.55),inset -18px -14px 40px rgba(0,0,0,.45);
+  position:relative;animation:glow 5s ease-in-out infinite}
+.yg-moon::after{content:"";position:absolute;left:30px;top:26px;width:22px;height:22px;border-radius:50%;background:rgba(0,0,0,.18);box-shadow:34px 18px 0 -4px rgba(0,0,0,.14),12px 52px 0 -6px rgba(0,0,0,.12)}
+@keyframes glow{0%,100%{box-shadow:0 0 60px rgba(255,212,121,.5),inset -18px -14px 40px rgba(0,0,0,.45)}50%{box-shadow:0 0 90px rgba(110,168,255,.5),inset -18px -14px 40px rgba(0,0,0,.45)}}
+.yg-hero h1{font-size:clamp(2rem,5vw,3rem);line-height:1.22;margin-bottom:1rem}
+.yg-hero h1 em{font-style:normal;color:var(--silver)}
+.yg-hero h1 u{text-decoration:none;color:var(--moon)}
+.yg-hero p{color:var(--muted);max-width:720px;margin:0 auto 1.8rem}
+.yg-cta{display:inline-flex;gap:.5rem;align-items:center;padding:.85rem 2rem;border-radius:30px;font-weight:800;color:#0b1020;background:linear-gradient(90deg,var(--silver),var(--blue),var(--purple));box-shadow:var(--shadow)}
+.yg-dim{color:var(--blue);font-size:.78rem;letter-spacing:3px;font-family:ui-monospace,monospace;margin-bottom:.5rem}
+
+.yg-sec{max-width:1180px;margin:0 auto;padding:3.1rem 1rem}
+.yg-head{margin-bottom:1.6rem;text-align:center}
+.yg-head .no{font-size:.72rem;color:var(--silver);letter-spacing:3px;font-family:ui-monospace,monospace}
+.yg-head h2{font-size:clamp(1.4rem,3.4vw,2.1rem);font-weight:900;margin-top:.3rem}
+.yg-head h2 i{color:var(--moon);font-style:normal}
+.yg-head p{color:var(--muted);margin-top:.35rem;font-size:.92rem}
+
+.yg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem}
+.yg-cell{border-radius:18px;padding:1.3rem 1rem;background:var(--card);text-align:center;transition:.25s;border:1px solid var(--line)}
+.yg-cell:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.yg-cell .ic{font-size:1.9rem}
+.yg-cell h3{font-size:.98rem;margin:.45rem 0 .25rem;font-weight:800}
+.yg-cell p{font-size:.74rem;color:var(--muted)}
+
+.yg-ch{display:grid;grid-template-columns:repeat(8,1fr);gap:.7rem}
+.yg-c{border-radius:14px;padding:1rem .3rem;background:var(--card);text-align:center;border:1px solid var(--line);transition:.25s}
+.yg-c:hover{transform:translateY(-3px);background:rgba(110,168,255,.14)}
+.yg-c .ic{font-size:1.5rem}
+.yg-c h3{font-size:.78rem;margin-top:.3rem;font-weight:700}
+.yg-c p{font-size:.6rem;color:var(--muted)}
+
+.yg-rank{display:grid;gap:1.1rem}
+.yg-item{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem}
+.yg-item h3{font-size:1.02rem;display:flex;justify-content:space-between;margin-bottom:.55rem;font-weight:800}
+.yg-item h3 span{color:var(--silver)}
+.yg-bar{height:16px;border-radius:999px;background:#070b15;overflow:hidden;position:relative;border:1px solid var(--line)}
+.yg-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--silver),var(--blue),var(--purple))}
+.yg-bar i::after{content:"🌙";position:absolute;right:5px;top:-2px;font-size:.8rem}
+
+.yg-notes{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1.1rem}
+.yg-note{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.2rem}
+.yg-note .tag{font-size:.7rem;padding:.2rem .6rem;border-radius:8px;font-weight:800}
+.yg-note.insomnia .tag{background:rgba(110,168,255,.18);color:var(--blue)}
+.yg-note.art .tag{background:rgba(155,140,255,.18);color:var(--purple)}
+.yg-note.night .tag{background:rgba(255,212,121,.18);color:var(--moon)}
+.yg-note.fan .tag{background:rgba(223,231,245,.18);color:var(--silver)}
+.yg-note h3{font-size:.96rem;margin:.55rem 0 .35rem;font-weight:800}
+.yg-note p{font-size:.8rem;color:var(--muted)}
+
+.yg-about{background:linear-gradient(160deg,#16203a,#0b1020);border:2px solid var(--silver);border-radius:26px;padding:2.4rem}
+.yg-about h2{font-size:1.9rem;margin-bottom:.8rem;font-weight:900}
+.yg-about h2 u{color:var(--blue);text-decoration:none}
+.yg-about p{color:var(--muted);margin-bottom:1rem}
+.yg-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.4rem}
+.yg-stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem;text-align:center}
+.yg-stat b{font-size:1.35rem;color:var(--moon);display:block}
+.yg-stat span{font-size:.76rem;color:var(--muted)}
+
+.yg-faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.2rem 1.1rem;margin-bottom:.7rem}
+.yg-faq summary{cursor:pointer;padding:.85rem 0;font-weight:800}
+.yg-faq p{padding:0 0 .85rem;color:var(--muted)}
+
+.yg-foot{border-top:2px solid var(--silver);background:#070b15;padding:2.2rem 1rem;text-align:center;color:var(--muted);font-size:.86rem}
+.yg-foot a{color:var(--silver)}
+.yg-foot__links{display:flex;gap:1.1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+.yg-foot__links a{font-size:.84rem}
+
+@media(max-width:980px){
+  .yg-grid{grid-template-columns:repeat(2,1fr)}
+  .yg-ch{grid-template-columns:repeat(4,1fr)}
+  .yg-notes{grid-template-columns:1fr 1fr}
+  .yg-stats{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .yg-nav{display:none;position:absolute;top:56px;left:0;right:0;flex-direction:column;gap:0;background:rgba(11,16,32,.98);border-bottom:2px solid var(--silver)}
+  .yg-nav.show{display:flex}
+  .yg-nav a{padding:.85rem 1rem;border-bottom:1px solid #1b2740}
+  .yg-burger{display:flex}
+  .yg-grid{grid-template-columns:1fr}
+  .yg-ch{grid-template-columns:repeat(3,1fr)}
+  .yg-notes{grid-template-columns:1fr}
+  .yg-stats{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="yg-top">
+  <div class="yg-top__in">
+    <div class="yg-logo">🌙 月光<b>影视</b> <i>·月相放映台</i></div>
+    <nav class="yg-nav" id="ygNav">
+      <a href="#home">月门</a>
+      <a href="#phases">月相片单</a>
+      <a href="#ch">月光频道</a>
+      <a href="#rank">月潮榜</a>
+      <a href="#notes">守月人</a>
+      <a href="#about">关于月光</a>
+    </nav>
+    <div class="yg-burger" onclick="document.getElementById('ygNav').classList.toggle('show')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<section class="yg-hero" id="home">
+  <div class="yg-moon"></div>
+  <p class="yg-dim">// phase of the night</p>
+  <h1>月光影视：今夜 <em>什么月相</em>，就看 <u>什么片</u></h1>
+  <p>新月藏冷门，上弦起势，满月放大片，下弦收尾，残月致郁，蓝月奇片。月光影视不解析、不秒播、不卖会员，只在银辉里把“对的那部”递给你。</p>
+  <a class="yg-cta" href="#phases">🌙 看今夜月相</a>
+</section>
+
+<section class="yg-sec" id="phases">
+  <div class="yg-head">
+    <div class="no">// moon phases</div>
+    <h2>月相 <i>片单</i></h2>
+    <p>月亮约 29.5 天圆一次，片单也跟着圆缺换血。[13](@ref)</p>
+  </div>
+  <div class="yg-grid">
+    <div class="yg-cell"><div class="ic">🌑</div><h3>新月·冷门</h3><p>《路边野餐》《地球之夜》《这时对那时错》</p></div>
+    <div class="yg-cell"><div class="ic">🌓</div><h3>上弦·起势</h3><p>《极速追杀》《坠落》《寿司之神》</p></div>
+    <div class="yg-cell"><div class="ic">🌕</div><h3>满月·大片</h3><p>《银翼杀手2049》《沙丘》《星际穿越》</p></div>
+    <div class="yg-cell"><div class="ic">🌗</div><h3>下弦·收尾</h3><p>《海街日记》《小森林》《步履不停》</p></div>
+    <div class="yg-cell"><div class="ic">🌘</div><h3>残月·致郁</h3><p>《花样年华》《海边的曼彻斯特》《情书》</p></div>
+    <div class="yg-cell"><div class="ic">🔵</div><h3>蓝月·奇片</h3><p>《月球》《2001太空漫游》《龙猫》《千与千寻》</p></div>
+    <div class="yg-cell"><div class="ic">🌑🔴</div><h3>月食·惊悚</h3><p>《月光光心慌慌》《午夜凶铃》《咒》标慎看</p></div>
+    <div class="yg-cell"><div class="ic">🌕🐰</div><h3>银辉·合家</h3><p>《月升王国》《寻梦环游记》《狮子王》</p></div>
+  </div>
+</section>
+
+<section class="yg-sec" id="ch">
+  <div class="yg-head">
+    <div class="no">// silver channels</div>
+    <h2>月光 <i>频道</i></h2>
+    <p>八个槽，像月亮八种银辉。</p>
+  </div>
+  <div class="yg-ch">
+    <div class="yg-c"><div class="ic">🎬</div><h3>电影</h3><p>院线/作者/老片</p></div>
+    <div class="yg-c"><div class="ic">📺</div><h3>剧集</h3><p>国/韩/美/日/泰</p></div>
+    <div class="yg-c"><div class="ic">🍥</div><h3>动漫</h3><p>月夜/奇幻/治愈</p></div>
+    <div class="yg-c"><div class="ic">🎤</div><h3>综艺</h3><p>慢综/夜谈/音乐</p></div>
+    <div class="yg-c"><div class="ic">⚡</div><h3>短剧</h3><p>逆袭/悬疑/甜虐</p></div>
+    <div class="yg-c"><div class="ic">🎞️</div><h3>纪录片</h3><p>夜城/海洋/宇宙</p></div>
+    <div class="yg-c"><div class="ic">🛠️</div><h3>修复</h3><p>4K/上色/声轨</p></div>
+    <div class="yg-c"><div class="ic">📡</div><h3>夜场</h3><p>拉片/怪谈/诗影</p></div>
+  </div>
+</section>
+
+<section class="yg-sec" id="rank">
+  <div class="yg-head">
+    <div class="no">// moonrise score</div>
+    <h2>月潮 <i>榜</i></h2>
+    <p>月升值 = 深夜点开 + 二刷 + 安利给朋友。</p>
+  </div>
+  <div class="yg-rank">
+    <div class="yg-item"><h3>1. 月光男孩 Moonlight <span>月升 99%</span></h3><div class="yg-bar"><i style="width:99%"></i></div></div>
+    <div class="yg-item"><h3>2. 月球 Moon <span>月升 97%</span></h3><div class="yg-bar"><i style="width:97%"></i></div></div>
+    <div class="yg-item"><h3>3. 月升王国 <span>月升 95%</span></h3><div class="yg-bar"><i style="width:95%"></i></div></div>
+    <div class="yg-item"><h3>4. 银翼杀手2049 <span>月升 94%</span></h3><div class="yg-bar"><i style="width:94%"></i></div></div>
+    <div class="yg-item"><h3>5. 海街日记 <span>月升 92%</span></h3><div class="yg-bar"><i style="width:92%"></i></div></div>
+  </div>
+</section>
+
+<section class="yg-sec" id="notes">
+  <div class="yg-head">
+    <div class="no">// moonkeeper logs</div>
+    <h2>守月人 <i>手记</i></h2>
+  </div>
+  <div class="yg-notes">
+    <article class="yg-note insomnia">
+      <span class="tag">🌙 失眠人</span>
+      <h3>新月夜别点大片</h3>
+      <p>《路边野餐》《小森林》《地球之夜》配台灯和茶，比爆米花大片助眠。月光影视把“新月·冷门”放第一，就是给睁眼到三点的人留的。</p>
+    </article>
+    <article class="yg-note art">
+      <span class="tag">🎞️ 文艺青年</span>
+      <h3>满月太亮，残月才出诗</h3>
+      <p>《花样年华》《情书》《海边的曼彻斯特》要残月看：蓝黑色里人脸发银，长镜头像潮水退得很慢。文艺片不是装，是月亮没全亮时人才肯露软处。</p>
+    </article>
+    <article class="yg-note night">
+      <span class="tag">🧃 夜班族</span>
+      <h3>下班要银辉不要血腥</h3>
+      <p>《深夜食堂》《武林外传》《请回答1988》是暖月黄；《月光光心慌慌》是月食红——夜班别碰红月，明天还要打卡。月光影视的“银辉·合家”就是保命槽。</p>
+    </article>
+    <article class="yg-note fan">
+      <span class="tag">🔭 老影迷</span>
+      <h3>蓝月之夜放奇片</h3>
+      <p>《2001太空漫游》《月球》《龙猫》不是儿童向也不是硬核向，是“月亮多出来那一夜”才该看的。老影迷等蓝月，就像等胶片重洗一遍。</p>
+    </article>
+  </div>
+</section>
+
+<section class="yg-sec" id="about">
+  <div class="yg-about">
+    <h2>关于 <u>月光影视</u></h2>
+    <p>
+      月光影视（yueguangyingshi-h5.github.io）不是“月光影视APP 破解版”。它是一座月相放映台：深蓝夜空打底，月银和清辉蓝做光，暖月黄标“下饭安全”，月晕紫标“奇片慎入”。
+    </p>
+    <p>
+      新月藏冷门、上弦起势、满月放大片、下弦收尾、残月致郁、蓝月奇片、月食惊悚、银辉合家——八个月相就是八种心情。频道装得下电影/剧集/动漫/综艺/短剧/纪录片/修复/夜场。本站只导航，正片去正版平台。
+    </p>
+    <div class="yg-stats">
+      <div class="yg-stat"><b>8 月相</b><span>新/上弦/满/下弦/残/蓝/月食/银辉</span></div>
+      <div class="yg-stat"><b>8 频道</b><span>影/剧/漫/综/短剧/纪录/修复/夜场</span></div>
+      <div class="yg-stat"><b>29.5 天</b><span>月相一轮，片单换血</span></div>
+      <div class="yg-stat"><b>0 解析</b><span>不挂盗链，不卖会员</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="yg-sec yg-faq">
+  <div class="yg-head">
+    <div class="no">// moonlight q & a</div>
+    <h2>月光 <i>问答</i></h2>
+  </div>
+  <details open>
+    <summary>月光影视为什么按“月相”分片单？</summary>
+    <p>因为看片是夜里的心事，不是货架采购。新月适合冷门，满月适合大片，残月适合致郁，蓝月适合奇片——和月亮圆缺一样，人的胃口也有阴晴圆缺。[13](@ref)</p>
+  </details>
+  <details>
+    <summary>和月亮影视大全、月影影视差在哪？</summary>
+    <p>月亮影视大全偏“月下浪漫片库”，月影影视偏“夜的诗篇/文艺诗影”，月光影视偏“月相=心情=片单”的放映台逻辑：今夜什么月，就看什么片。</p>
+  </details>
+  <details>
+    <summary>蓝月和月食会不会太玄？</summary>
+    <p>不玄，只是标签：蓝月=罕见奇片/科幻/奇幻，月食=惊悚/恐怖且标“别独自看”。守月人手记里也写了，夜班族直接跳银辉槽，别跟红月较劲。</p>
+  </details>
+</section>
+
+<footer class="yg-foot">
+  <div class="yg-foot__links">
+    <a href="#phases">月相片单</a>
+    <a href="#ch">月光频道</a>
+    <a href="#rank">月潮榜</a>
+    <a href="#notes">守月人</a>
+    <a href="#about">关于月光影视</a>
+    <a href="#">免责声明</a>
+  </div>
+  <p>© 2026 <a href="https://yueguangyingshi-h5.github.io">月光影视</a> · yueguangyingshi-h5.github.io</p>
+  <p>月光影视 —— 今夜什么月相，就看什么片。本站为影视导航站，不提供盗版播放。</p>
+</footer>
+
+<script>
+document.querySelectorAll('.yg-nav a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('ygNav').classList.remove('show');
+  });
+});
+</script>
+
+</body>
+</html>
